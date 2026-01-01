@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CryptaText.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CryptaText.Resources.Strings">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <HorizontalStackLayout Spacing="10">
+                <Button
+                    x:Name="LangToggleBtn"
+                    Clicked="ToggleLanguageClicked"
+                    Text="FA"
+                    WidthRequest="50" />
+                <Picker
+                    x:Name="ThemePicker"
+                    SelectedIndexChanged="ThemePickerChanged"
+                    WidthRequest="120" />
+            </HorizontalStackLayout>
+
+            <Editor x:Name="InputText" HeightRequest="120" />
+
+            <HorizontalStackLayout HorizontalOptions="End" Spacing="10">
+                <Button
+                    Clicked="PasteInputClicked"
+                    Text="📋"
+                    WidthRequest="40" />
+                <Button
+                    Clicked="ClearInputClicked"
+                    Text="🧹"
+                    WidthRequest="40" />
+            </HorizontalStackLayout>
+
+            <Grid Margin="0,0,0,10" ColumnDefinitions="*, Auto, Auto, Auto ">
+                <Entry
+                    x:Name="KeyText"
+                    Grid.Column="0"
+                    IsPassword="True"
+                    Placeholder="{x:Static local:AppStrings.KeyPlaceholder}" />
+                <Button
+                    x:Name="ToggleKeyBtn"
+                    Grid.Column="1"
+                    Margin="8,0,0,0"
+                    Clicked="ToggleKeyClicked"
+                    Text="👁"
+                    WidthRequest="40" />
+                <Button
+                    x:Name="EncryptBtn"
+                    Grid.Column="2"
+                    Margin="8,0,0,0"
+                    Clicked="EncryptClicked" />
+                <Button
+                    x:Name="DecryptBtn"
+                    Grid.Column="3"
+                    Margin="8,0,0,0"
+                    Clicked="DecryptClicked" />
+            </Grid>
+
+            <Editor
+                x:Name="OutputText"
+                HeightRequest="120"
+                IsReadOnly="True" />
+
+            <HorizontalStackLayout HorizontalOptions="End" Spacing="10">
+                <Button
+                    Clicked="CopyOutputClicked"
+                    Text="📄"
+                    WidthRequest="40" />
+                <Button
+                    Clicked="ClearOutputClicked"
+                    Text="🧹"
+                    WidthRequest="40" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
