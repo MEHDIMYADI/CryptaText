@@ -14,14 +14,14 @@ dotnet restore
 dotnet publish -f net10.0-windows10.0.19041.0 -c Release
 ```
 ### The output will be available in:
-bin/Release/net10.0-windows10.0.19041.0/win10-x64/publish/
+> bin/Release/net10.0-windows10.0.19041.0/win10-x64/publish/
 
 ## Android
 ```bash
 dotnet publish -f net10.0-android -c Release
 ```
 ### The output will be available in:
-bin/Release/net10.0-android/
+> bin/Release/net10.0-android/
 
 ## iOS / Mac
 ```
