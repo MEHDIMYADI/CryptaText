@@ -18,10 +18,7 @@ namespace CryptaText
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var mainPage = new NavigationPage(new MainPage());
-            return new Window(mainPage);
+            return new Window(new AppShell());
         }
     }
 }
-
-
